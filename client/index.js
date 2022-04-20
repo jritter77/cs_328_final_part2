@@ -81,3 +81,5 @@ async function showScores() {
 
 const submitBtn = document.querySelector('input[type="submit"]');
 submitBtn.addEventListener("click", handleSubmit);
+
+showScores();
