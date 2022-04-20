@@ -35,7 +35,7 @@ oci_free_statement($create_table_stmt);
 
 // Create table
 $create_table_str = "
-    create table example(
+    create table scores(
         username varchar(30),
         score number
     )
