@@ -22,7 +22,7 @@ $req = json_decode($_POST['req']);
 $props_query_str = '
         insert into scores
         values (
-            :user,
+            :username,
             :score
             )
 ';
@@ -32,7 +32,7 @@ $props_query_stmt = oci_parse($conn, $props_query_str);
 
 
 // bind vars passed from form to $_POST to query statement
-oci_bind_by_name($props_query_stmt, ':user', $req->user);
+oci_bind_by_name($props_query_stmt, ':username', $req->user);
 oci_bind_by_name($props_query_stmt, ':score', $req->score);
 
 
@@ -41,10 +41,6 @@ oci_execute($props_query_stmt, OCI_COMMIT_ON_SUCCESS);
 
 
 echo oci_free_statement($props_query_stmt);
-
-echo $_POST['my_str'] . ' Submitted to DB!';
-
-
 
 
 oci_close($conn);
