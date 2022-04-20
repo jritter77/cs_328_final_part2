@@ -12,7 +12,6 @@ function handleSubmit(e) {
 
     let radioBtns = [...document.querySelectorAll('input[type="radio"]')];
     let givenAnswer = document.querySelector('input[name="q6"]');
-    let user = document.querySelector('input[name="user"]');
 
     radioBtns = radioBtns.filter((value) => value.checked);
 
@@ -36,10 +35,12 @@ function gradeQuiz(answers, key) {
   }
   results.innerHTML = "<h3>You scored " + score + " out of " + key.length + ".";
 
-  saveQuiz(user, score);
+  saveQuiz(score);
 }
 
-async function saveQuiz(user, score) {
+async function saveQuiz(score) {
+  let user = document.querySelector('input[name="user"]');
+
   let result = await post(
     "../server/submission.php",
     JSON.stringify({ user: user, score: score })
