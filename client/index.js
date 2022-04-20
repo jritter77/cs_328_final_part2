@@ -1,4 +1,4 @@
-import { post } from "./WebRequest";
+import { get, post } from "./WebRequest";
 
 const answerKey = ["c", "b", "a", "false", "true", "sacramento"];
 
@@ -46,6 +46,37 @@ async function saveQuiz(score) {
     JSON.stringify({ user: user, score: score })
   );
   console.log(result);
+
+  showScores();
+}
+
+async function showScores() {
+  let result = await get("../server/show_table.php");
+  console.log(result);
+
+  result = JSON.parse(result);
+
+  let table = $("#score_table");
+  table.html("");
+
+  let table_header = $(`
+        <tr>
+            <th>User</th>
+            <th>Score</th>
+        </tr>
+        `);
+
+  table.append(table_header);
+
+  for (let row of result) {
+    let tr = $("<tr></tr>");
+
+    for (let col in row) {
+      tr.append($(`<td>${row[col]}</td>`));
+    }
+
+    table.append(tr);
+  }
 }
 
 const submitBtn = document.querySelector('input[type="submit"]');
