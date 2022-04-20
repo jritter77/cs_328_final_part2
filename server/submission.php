@@ -32,8 +32,8 @@ $props_query_stmt = oci_parse($conn, $props_query_str);
 
 
 // bind vars passed from form to $_POST to query statement
-oci_bind_by_name($props_query_stmt, ':user', $req->user;
-oci_bind_by_name($props_query_stmt, ':score', $req->score;
+oci_bind_by_name($props_query_stmt, ':user', $req->user);
+oci_bind_by_name($props_query_stmt, ':score', $req->score);
 
 
 // MUST USE 'OCI_COMMIT_ON_SUCCESS" OR YOUR INSERT WILL HAVE NO EFFECT!!!
