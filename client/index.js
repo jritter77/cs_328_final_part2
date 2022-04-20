@@ -39,7 +39,7 @@ function gradeQuiz(answers, key) {
 }
 
 async function saveQuiz(score) {
-  let user = document.querySelector('input[name="user"]');
+  let user = document.querySelector('input[name="user"]').value;
 
   let result = await post(
     "../server/submission.php",

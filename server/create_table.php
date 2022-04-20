@@ -53,5 +53,3 @@ oci_close($conn);
 
 
 ?>
-
-<a href="index.php">Back</a>

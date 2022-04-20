@@ -39,8 +39,7 @@ oci_bind_by_name($props_query_stmt, ':score', $req->score);
 // MUST USE 'OCI_COMMIT_ON_SUCCESS" OR YOUR INSERT WILL HAVE NO EFFECT!!!
 oci_execute($props_query_stmt, OCI_COMMIT_ON_SUCCESS);
 
-
-echo oci_free_statement($props_query_stmt);
+oci_free_statement($props_query_stmt);
 
 
 oci_close($conn);
@@ -49,4 +48,3 @@ oci_close($conn);
 
 ?>
 
-<a href="index.php">Back</a>
