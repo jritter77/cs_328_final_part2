@@ -37,6 +37,12 @@ oci_free_statement($create_table_stmt);
 $create_table_str = "
     create table scores(
         username varchar(30),
+        q1 varchar(30),
+        q2 varchar(30),
+        q3 varchar(30),
+        q4 varchar(30),
+        q5 varchar(30),
+        q6 varchar(30),
         score number
     )
 ";

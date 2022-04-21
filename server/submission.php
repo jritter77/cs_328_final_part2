@@ -23,6 +23,12 @@ $props_query_str = '
         insert into scores
         values (
             :username,
+            :q1,
+            :q2,
+            :q3,
+            :q4,
+            :q5,
+            :q6,
             :score
             )
 ';
@@ -33,7 +39,13 @@ $props_query_stmt = oci_parse($conn, $props_query_str);
 
 // bind vars passed from form to $_POST to query statement
 oci_bind_by_name($props_query_stmt, ':username', $req->user);
+oci_bind_by_name($props_query_stmt, ':q1', $req->answers->q1);
+oci_bind_by_name($props_query_stmt, ':q2', $req->answers->q2);
+oci_bind_by_name($props_query_stmt, ':q3', $req->answers->q3);
+oci_bind_by_name($props_query_stmt, ':q4', $req->answers->q4);
+oci_bind_by_name($props_query_stmt, ':q6', $req->answers->q6);
 oci_bind_by_name($props_query_stmt, ':score', $req->score);
+
 
 
 // MUST USE 'OCI_COMMIT_ON_SUCCESS" OR YOUR INSERT WILL HAVE NO EFFECT!!!

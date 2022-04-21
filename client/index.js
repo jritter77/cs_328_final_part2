@@ -35,51 +35,18 @@ function gradeQuiz(answers, key) {
   }
   results.innerHTML = "<h3>You scored " + score + " out of " + key.length + ".";
 
-  saveQuiz(score);
+  saveQuiz(answers, score);
 }
 
-async function saveQuiz(score) {
+async function saveQuiz(answers, score) {
   let user = document.querySelector('input[name="username"]').value;
 
   let result = await post(
     "../server/submission.php",
-    JSON.stringify({ user: user, score: score })
+    JSON.stringify({ user: user, answers: answers, score: score })
   );
   console.log(result);
-
-  showScores();
-}
-
-async function showScores() {
-  let result = await get("../server/show_table.php");
-  console.log(result);
-
-  result = JSON.parse(result);
-
-  let table = $("#score_table");
-  table.html("");
-
-  let table_header = $(`
-        <tr>
-            <th>User</th>
-            <th>Score</th>
-        </tr>
-        `);
-
-  table.append(table_header);
-
-  for (let row of result) {
-    let tr = $("<tr></tr>");
-
-    for (let col in row) {
-      tr.append($(`<td>${row[col]}</td>`));
-    }
-
-    table.append(tr);
-  }
 }
 
 const submitBtn = document.querySelector('input[type="submit"]');
 submitBtn.addEventListener("click", handleSubmit);
-
-showScores();
