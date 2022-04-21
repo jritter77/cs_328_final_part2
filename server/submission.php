@@ -39,11 +39,12 @@ $props_query_stmt = oci_parse($conn, $props_query_str);
 
 // bind vars passed from form to $_POST to query statement
 oci_bind_by_name($props_query_stmt, ':username', $req->user);
-oci_bind_by_name($props_query_stmt, ':q1', $req->answers->q1);
-oci_bind_by_name($props_query_stmt, ':q2', $req->answers->q2);
-oci_bind_by_name($props_query_stmt, ':q3', $req->answers->q3);
-oci_bind_by_name($props_query_stmt, ':q4', $req->answers->q4);
-oci_bind_by_name($props_query_stmt, ':q6', $req->answers->q6);
+oci_bind_by_name($props_query_stmt, ':q1', $req->answers[0]);
+oci_bind_by_name($props_query_stmt, ':q2', $req->answers[1]);
+oci_bind_by_name($props_query_stmt, ':q3', $req->answers[2]);
+oci_bind_by_name($props_query_stmt, ':q4', $req->answers[3]);
+oci_bind_by_name($props_query_stmt, ':q5', $req->answers[4]);
+oci_bind_by_name($props_query_stmt, ':q6', $req->answers[5]);
 oci_bind_by_name($props_query_stmt, ':score', $req->score);
 
 
