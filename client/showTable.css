@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+}
+
+table {
+    margin: 5vw;
+    min-width: 480px;
+    border-spacing: 4px;
+    background-color: white;
+}
+
+th {
+    background-color: lightgray;
+}
+
