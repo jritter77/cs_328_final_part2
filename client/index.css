@@ -13,7 +13,7 @@ form > label {
     display: flex;
     flex-direction: column;
     margin-bottom: 32px;
-    background-color: lightgray;
+    background-color: white;
     font-weight: bold;
 }
 
@@ -24,4 +24,9 @@ label label {
 input {
     max-width: 120px;
     margin: 8px;
+    font-weight: normal;
+}
+
+span {
+    background-color: lightgray;
 }
