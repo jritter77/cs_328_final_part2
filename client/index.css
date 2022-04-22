@@ -13,6 +13,10 @@ form > label {
     display: flex;
     flex-direction: column;
     margin-bottom: 32px;
+    background-color: lightgray;
+}
+
+label label {
     background-color: white;
 }
 
