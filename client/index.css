@@ -33,12 +33,13 @@ span {
 
 .btn {
     background-color: white;
-    border-radius: 20%;
+    border-radius: 8px;
     font-size: x-large;
     text-align: center;
     color: black;
     font-weight: bold;
     border: none;
-    max-width: 160px;
+    width: 160px;
     margin: 8px;
+    text-decoration: none;
 }
