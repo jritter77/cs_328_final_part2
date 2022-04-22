@@ -39,4 +39,6 @@ span {
     color: black;
     font-weight: bold;
     border: none;
+    max-width: none;
+    margin: 8px;
 }
