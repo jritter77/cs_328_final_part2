@@ -58,3 +58,8 @@ h1 {
 #button_group {
     display: flex;
 }
+
+#quiz_result {
+    color: white;
+    font-size: x-large;
+}

@@ -26,7 +26,7 @@ function handleSubmit(e) {
 }
 
 function gradeQuiz(answers, key) {
-  const results = document.querySelector("div");
+  const results = document.querySelector("#quiz_result");
   let score = 0;
   for (let i = 0; i < key.length; i++) {
     if (answers[i] === key[i]) {
