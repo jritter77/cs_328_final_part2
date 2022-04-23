@@ -8,7 +8,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    margin: 10%;
+    margin: 10% 5%;
 }
 
 form > label {
