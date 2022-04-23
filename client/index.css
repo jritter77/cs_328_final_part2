@@ -16,7 +16,7 @@ form > label {
     flex-direction: column;
     background-color: white;
     font-weight: bold;
-    padding: 8px;
+    padding: 16px;
     margin-bottom: 32px;
     border-radius: 25px;
 }
@@ -33,6 +33,7 @@ input {
 
 span {
     background-color: rgb(243, 228, 147);
+    padding: 8px;
     border-radius: 25px;
 }
 
