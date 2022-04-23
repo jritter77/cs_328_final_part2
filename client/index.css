@@ -33,13 +33,17 @@ span {
 
 .btn {
     background-color: white;
-    border-radius: 8px;
+    border-radius: 25px;
+    padding: 16px;
     font-size: x-large;
     text-align: center;
     color: black;
     font-weight: bold;
     border: none;
-    width: 160px;
     margin: 8px;
     text-decoration: none;
+}
+
+#button_group {
+    display: flex;
 }
