@@ -8,6 +8,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
+    margin: 10%;
 }
 
 form > label {
@@ -16,8 +17,6 @@ form > label {
     background-color: white;
     font-weight: bold;
     padding: 8px;
-    margin-left: 10%;
-    margin-right: 10%;
     margin-bottom: 32px;
 }
 
@@ -32,7 +31,7 @@ input {
 }
 
 span {
-    background-color: lightgray;
+    background-color: gold;
 }
 
 .btn {
