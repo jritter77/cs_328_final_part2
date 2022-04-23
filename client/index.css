@@ -33,6 +33,7 @@ input {
 
 span {
     background-color: rgb(243, 228, 147);
+    border-radius: 25px;
 }
 
 h1 {
