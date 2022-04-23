@@ -13,9 +13,23 @@ table {
 }
 
 th {
-    background-color: lightgray;
+    background-color: rgb(243, 228, 147);
 }
 
 td {
     text-align: center;
+}
+
+.btn {
+    display: block;
+    background-color: white;
+    border-radius: 25px;
+    padding: 16px;
+    font-size: x-large;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    border: none;
+    margin: 8px;
+    text-decoration: none;
 }
