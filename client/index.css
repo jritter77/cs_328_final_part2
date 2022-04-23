@@ -15,8 +15,9 @@ form > label {
     flex-direction: column;
     background-color: white;
     font-weight: bold;
-    padding: 10%;
-    margin: 10%;
+    padding: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 label label {
