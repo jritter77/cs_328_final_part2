@@ -13,9 +13,10 @@ form {
 form > label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 32px;
     background-color: white;
     font-weight: bold;
+    padding: 10%;
+    margin: 10%;
 }
 
 label label {
